@@ -5,8 +5,11 @@ import Students from './pages/Students'
 import './App.css'
 
 function App() {
+  // Use basename only in production (GitHub Pages)
+  const basename = import.meta.env.PROD ? '/ITEW6-LABEXAM' : '/'
+  
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="App">
         <HeaderComponent />
         <main className="main-content">
