@@ -70,6 +70,8 @@ function Students() {
         }))
         setApiData(transformedData)
       } catch (err) {
+        console.error('API Error:', err)
+        console.error('Error Message:', err.message)
         setError(err.message)
       } finally {
         setLoading(false)
@@ -83,6 +85,17 @@ function Students() {
     window.location.reload()
   }
 
+  // Function to test error handling (for demonstration)
+  const handleTestError = () => {
+    setLoading(true)
+    setError(null)
+    // Simulate API error by using wrong URL
+    setTimeout(() => {
+      setError('Failed to fetch data from API - Test Error')
+      setLoading(false)
+    }, 1000)
+  }
+
   // Combine API data and local students
   const allStudents = [...apiData, ...localStudents]
 
@@ -90,9 +103,26 @@ function Students() {
     <div className="students-page">
       <div className="page-header">
         <h2 className="page-title">All Students</h2>
-        <button className="refresh-button" onClick={handleRefresh}>
-          Refresh Data
-        </button>
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <button className="refresh-button" onClick={handleRefresh}>
+            Refresh Data
+          </button>
+          <button 
+            className="test-error-button" 
+            onClick={handleTestError}
+            style={{
+              backgroundColor: '#e74c3c',
+              color: 'white',
+              border: 'none',
+              padding: '10px 20px',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontSize: '1rem'
+            }}
+          >
+            Test Error
+          </button>
+        </div>
       </div>
       
       {loading && (
