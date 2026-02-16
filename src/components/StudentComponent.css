@@ -1,0 +1,56 @@
+.student-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.student-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.student-info {
+  margin-bottom: 15px;
+}
+
+.student-name {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.student-detail {
+  color: #555;
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.toggle-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #2980b9;
+}
+
+.student-details {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  color: #555;
+}
+
+.student-details p {
+  margin: 5px 0;
+}
+
