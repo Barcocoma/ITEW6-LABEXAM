@@ -42,3 +42,9 @@ src/
 
 API URL: https://jsonplaceholder.typicode.com/users
 
+## Deployment
+
+This app is deployed on GitHub Pages and can be accessed at:
+**https://barcocoma.github.io/ITEW6-LABEXAM/**
+
+The deployment is automated using GitHub Actions. Every push to the `main` branch will automatically deploy the latest version.
